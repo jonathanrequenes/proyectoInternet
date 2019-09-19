@@ -5,16 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">HOLA MUNDO</div>
+                <div class="card-header">BIENVENIDA</div>
 
                 <div class="card-body">
-                  HOLA MUNDO EN VISTA CON HTML<br>
-
-                  <ul>
-                  @for($x =0; $x< 5; $x++)
-                  <li>HOLA {{ $x * $x}} </li> <br>
-                  @endfor
-                  <ul>
+                  HOLA {{ $nombre }} {{$apellido ?? 'No Indicó Apellido'}} Edad: {{$edad}}<br>
                 </div>
             </div>
         </div>

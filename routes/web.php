@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/bienvenida', function(){
-  return view('landing-page');
-});
+Route::get('/bienvenida/{nombre?}/{apellido?}', 'SitioController@bienvenida');
+
+Route::get('/contacto', 'SitioController@contacto')->name('contacto');
+Route::post('contacto-guardar', 'SitioController@guardaContacto')->name('guardar');
